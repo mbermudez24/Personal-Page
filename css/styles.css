@@ -83,8 +83,8 @@ nav a:hover {
 
 #about {
     width: 70%;
-    margin: auto;
-    padding: 150px 0;
+
+    margin: 150px auto;
     display: flex;
     justify-content: space-between;
 }
@@ -95,8 +95,6 @@ nav a:hover {
 }
 
 .description p {
-    padding: 0 10px;
-    font-size: 1.3rem;
     margin-top: 0;
 }
 
@@ -113,7 +111,7 @@ nav a:hover {
 }
 
 .info img {
-    width: 200px;
+    width: 300px;
     border-radius: 50%;
 }
 
@@ -121,15 +119,13 @@ nav a:hover {
     background: linear-gradient(#323333, #2a2b2b);
     opacity: 0.9;
     color: white;
-    margin-top: 20px;
     padding: 10px;
-    font-size: 1.3rem;
 }
 
 .sections-div {
-    width: 70%;
-    margin: auto;
-    padding: 150px 0;
+    width: 80%;
+
+    margin: 150px auto;
     display: flex;
     justify-content: space-between;
 }
@@ -157,79 +153,70 @@ nav a:hover {
 
 .skills-flex {
     width: 90%;
-    margin: auto;
-    padding: 150px 0;
+
+    margin: 150px auto;
     display: flex;
     justify-content: space-between;
 }
 
 .skills-flex>div {
-    width: 40%;
+    width: 50%;
     text-align: justify;
 }
 
-.skills-flex h2,
-.skills-flex p {
-    font-size: 1.3rem;
-}
-
-.flex-chart {
+.skills-flex .flex-chart {
+    width: 40%;
     display: flex;
     justify-content: space-between;
     text-align: center;
-}
+    flex-wrap: wrap;
+    align-items: center;
 
-.flex-chart h3 {
-    font-size: 3rem;
+    div {
+        width: 50%;
+    }
 }
 
 .languages {
     width: 90%;
-    margin: auto;
-    padding: 150px 0;
+    margin: 150px auto;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
 .languages>div {
-    padding: 50px;
+    margin: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #portfolio {
-    padding: 50px 0;
+    margin: 50px auto;
     text-align: center;
 }
 
-#portfolio h2 {
-    padding-bottom: 50px;
-}
-
-#portfolio h3 {
-    color: black;
-}
-
 .portfolio-grid {
+    margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    grid-gap: 30px;
 }
 
 .portfolio-item {
     text-align: center;
     overflow: hidden;
-}
 
-.portfolio-item img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    transition: 0.5s;
+    img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        transition: 0.5s;
+    }
 }
 
 .portfolio-item h3 {
+    color: black;
     opacity: 0;
     transition: 0.5s;
 }
@@ -244,10 +231,13 @@ nav a:hover {
 
 .contact-flex {
     width: 90%;
-    margin: auto;
-    padding-bottom: 50px;
+    margin: 50px auto;
     display: flex;
     justify-content: space-between;
+
+    >div {
+        width: 45%;
+    }
 }
 
 .contact-flex p {
@@ -273,8 +263,6 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    width: 400px;
 }
 
 /* Styles for the text input fields */
@@ -298,33 +286,27 @@ nav a:hover {
     font-size: 16px;
 }
 
-/* Increased selector specificity and grouped related properties */
 .form button {
-    /* Appearance */
     color: white;
     max-width: 300px;
     border: none;
     border-radius: 50px;
-    background: linear-gradient(-180deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 96%) no-repeat;
-    /* Black gradient */
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 10px 0px;
+    background: linear-gradient(-180deg, #000 0%, #000 96%) no-repeat;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     height: 50px;
-    line-height: 50px;
+    line-height: 1;
     box-sizing: border-box;
     text-decoration: none;
-    padding: 0px 40px;
-    font-size: 14px;
+    padding: 0 40px;
+    font: 14px/1.4 "Open Sans", sans-serif;
     letter-spacing: 0.4px;
     cursor: pointer;
     position: relative;
     z-index: 1;
     word-break: initial;
     outline: none;
-
-    /* Functionality (optional) */
     transition: max-width 0.3s ease-in-out;
-    /* Example hover effect */
 }
 
 /* Hover effect for the submit button */
@@ -339,4 +321,61 @@ footer {
     text-align: center;
     background: linear-gradient(#323333, #2a2b2b);
     padding: 2rem 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /* Estilos para móviles grandes */
+    #about {
+        width: 95%;
+        margin: 150px auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .description {
+        width: 50%;
+        text-align: justify;
+    }
+
+    .info {
+        text-align: center;
+    }
+
+    .portfolio-grid {
+        grid-gap: 50px;
+    }
+
+    .portfolio-item img {
+        height: 450px;
+    }
+
+    .social p {
+
+        font-size: 1.5rem;
+    }
+
+    .social-img {
+        width: 50%;
+
+        img {
+            width: 50px;
+        }
+    }
+
+    /* Styles for the text input fields */
+    .form input[type="text"] {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Styles for the textarea */
+    .form textarea {
+        padding: 20px;
+    }
+
+    footer {
+        font-size: 1.35rem;
+    }
+
 }
