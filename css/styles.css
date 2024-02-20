@@ -1,15 +1,18 @@
+/* Reset or Normalize CSS */
+/* Add your preferred CSS reset or normalize.css here */
+
 body {
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    background-color: #ffffff;
-    position: relative;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
     width: 100%;
     height: auto;
 }
@@ -19,44 +22,33 @@ header {
     background-image: url("../assets/images/background.jpg");
     background-size: cover;
     background-position: center center;
-    position: relative;
     filter: grayscale(1);
 }
 
-.hero h1 {
-    color: #ffffff;
-    font-size: 48px;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-
-}
-
+.hero h1,
 .hero h2 {
     color: #ffffff;
-    font-size: 24px;
-    font-weight: normal;
+    text-align: center;
     margin: 0;
     padding: 0;
-    text-align: center;
-
 }
 
 nav {
-    position: absolute;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    z-index: 50;
+    display: flex;
+    justify-content: flex-end;
+    /* Changed to flex-end */
     background-color: #333333;
     opacity: 0.8;
 }
 
-
 nav ul {
     list-style: none;
-    margin: 20px 0px;
+    margin: 20px 0;
     padding: 0;
     text-align: right;
 }
@@ -94,7 +86,7 @@ nav a:hover {
 #about {
     width: 70%;
     margin: auto;
-    padding: 150px 0 150px 0;
+    padding: 150px 0;
     display: flex;
     justify-content: space-between;
 }
@@ -102,23 +94,22 @@ nav a:hover {
 .description {
     width: 50%;
     text-align: justify;
+}
 
-    >p {
-        padding: 10px;
-        font-size: 1.3rem;
-    }
+.description p {
+    padding: 10px;
+    font-size: 1.3rem;
 }
 
 .info {
     text-align: center;
+}
 
-    p {
-        margin-top: 0px;
-    }
+.info p {
+    margin-top: 0;
 }
 
 .info p b {
-    margin-top: 0px;
     font-size: 1.62rem;
 }
 
@@ -136,15 +127,10 @@ nav a:hover {
     font-size: 1.3rem;
 }
 
-a {
-    color: white;
-    font-size: 1.3rem;
-}
-
 .sections-div {
     width: 70%;
     margin: auto;
-    padding: 150px 0 150px 0;
+    padding: 150px 0;
     display: flex;
     justify-content: space-between;
 }
@@ -168,64 +154,62 @@ a {
 
 .sect-img img {
     width: 75%;
-    /* Remove absolute positioning */
 }
 
 .skills-flex {
     width: 90%;
     margin: auto;
-    padding: 150px 0 150px 0;
+    padding: 150px 0;
     display: flex;
     justify-content: space-between;
+}
 
-    >div {
-        width: 40%;
-        text-align: justify;
-    }
+.skills-flex>div {
+    width: 40%;
+    text-align: justify;
+}
 
-    h2,
-    p {
-        font-size: 1.3rem;
-    }
+.skills-flex h2,
+.skills-flex p {
+    font-size: 1.3rem;
 }
 
 .flex-chart {
     display: flex;
     justify-content: space-between;
     text-align: center;
+}
 
-    h3 {
-        font-size: 3rem;
-    }
+.flex-chart h3 {
+    font-size: 3rem;
 }
 
 .languages {
     width: 90%;
     margin: auto;
-    padding: 150px 0 150px 0;
+    padding: 150px 0;
     display: flex;
     flex-direction: column;
     text-align: center;
+}
 
-    >div {
-        padding: 50px;
-        display: flex;
-        justify-content: space-around;
-        text-align: center;
-    }
+.languages>div {
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
 }
 
 #portfolio {
     padding: 50px 0;
     text-align: center;
+}
 
-    h2 {
-        padding-bottom: 50px;
-    }
+#portfolio h2 {
+    padding-bottom: 50px;
+}
 
-    h3 {
-        color: black;
-    }
+#portfolio h3 {
+    color: black;
 }
 
 .portfolio-grid {
@@ -265,27 +249,24 @@ a {
     padding-bottom: 50px;
     display: flex;
     justify-content: space-between;
-
-    p {
-        color: #333333;
-    }
 }
 
-.social {
+.contact-flex p {
+    color: #333333;
+}
 
-    img {
-        width: 30px;
-    }
+.social img {
+    width: 30px;
+}
 
-    p {
-        font-weight: bold;
-    }
+.social p {
+    font-weight: bold;
+}
 
-    .social-img {
-        width: 30%;
-        display: flex;
-        justify-content: space-around;
-    }
+.social-img {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
 }
 
 /* Basic styles for the form container */
@@ -346,7 +327,6 @@ a {
     transition: max-width 0.3s ease-in-out;
     /* Example hover effect */
 }
-
 
 /* Hover effect for the submit button */
 .form button:hover {
