@@ -340,7 +340,7 @@ footer {
     .languages>div,
     .contact-flex {
         width: 80%;
-        height: 950px;
+        height: auto;
         flex-direction: column;
         /* Stack sections vertically */
         align-items: center;
