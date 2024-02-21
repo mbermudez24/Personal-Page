@@ -1,6 +1,14 @@
-body {
+body,
+html {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+
+}
+
+
+* {
+    box-sizing: border-box;
 }
 
 header {
@@ -324,7 +332,132 @@ footer {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 480px) {
+
+    /* Hero section */
+    .hero-text {
+        width: 90%;
+        /* Reduce hero text width */
+        padding: 10px;
+        /* Adjust padding for smaller screens */
+    }
+
+    #about,
+    .sections-div,
+    .skills-flex,
+    .languages>div,
+    .contact-flex {
+        width: 80%;
+        height: auto;
+        flex-direction: column;
+        /* Stack sections vertically */
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .description {
+        width: 100%;
+        margin-bottom: 50px;
+
+        p {
+            margin-bottom: 60px;
+        }
+    }
+
+    .sections-div {
+        height: 760px;
+
+        >div {
+            width: 90%;
+        }
+
+        .sect-img {
+            width: 40%;
+            height: 40%;
+        }
+    }
+
+    .skills-flex {
+        width: 90%;
+        height: 600px;
+
+
+    }
+
+    .skills-flex>div {
+        width: 100%;
+
+        p {
+            margin: 50px 0;
+        }
+    }
+
+    .skills-flex .flex-chart {
+        width: 100%;
+
+        div {
+            width: auto;
+        }
+    }
+
+    .languages>div {
+        justify-content: space-around;
+
+        div {
+            margin-bottom: 50px;
+        }
+    }
+
+    #portfolio {
+        width: 85%;
+        height: auto;
+
+        /* Portfolio grid */
+        .portfolio-grid {
+            grid-template-columns: 1fr;
+            /* Single column for portfolio items */
+            grid-gap: 50px;
+        }
+    }
+
+    .contact-flex {
+        height: 850px;
+    }
+
+    .contact-flex>div {
+        width: 100%;
+
+        p {
+            margin-top: 50px;
+        }
+    }
+
+    .social {
+
+        img {
+            width: 50px;
+        }
+
+        .social-img {
+            width: 50%;
+        }
+    }
+
+    /* Form */
+    .form input[type="text"],
+    .form textarea {
+        width: 100%;
+        padding: 20px;
+        /* Reduce input field width */
+    }
+
+    footer {
+        font-size: 1.3rem;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
 
     /* Hero section */
     .hero-text {
