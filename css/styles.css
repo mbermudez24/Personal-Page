@@ -334,6 +334,10 @@ footer {
 
 @media (max-width: 480px) {
 
+    nav {
+        justify-content: flex-start;
+    }
+
     /* Hero section */
     .hero-text {
         width: 90%;
