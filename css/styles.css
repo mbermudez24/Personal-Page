@@ -326,6 +326,10 @@ footer {
 
 @media only screen and (max-width: 768px) {
 
+    html {
+        width: 100%;
+    }
+
     /* Hero section */
     .hero-text {
         width: 80%;
